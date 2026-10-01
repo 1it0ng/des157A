@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Experimentation: Experiment 1</title>
+</head>
+
+<body>
+    <h1>Experiment 1</h1>
+    <h2>Please open the console to see the functionality of the code!</h2>
+
+    <script>
+        // my program takes a lowercase string and capitalizes the first letter of each word in the string
+        var lowerCaseString = prompt("This program can turn each letter of the first word in a sentence be uppercase! Enter a sentence to try it out!", "");
+
+        const myArr = lowerCaseString.split(" ");
+        const wordArr = [];
+
+        for (var eachItem of myArr) {
+            var firstChar = eachItem.charAt(0);
+            let firstCharUpper = firstChar.toUpperCase();
+
+            var restChar = eachItem.slice(1);
+
+            var capitalizedWord = firstCharUpper + restChar
+
+            wordArr.push(capitalizedWord);
+        }
+
+        var sentence = wordArr.join(" ");
+
+        console.log(sentence);
+
+    </script>
+</body>
+
+</html>
