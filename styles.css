@@ -113,16 +113,16 @@ header h2 {
 	color: #20213d;
 }
 
-.banner {
+#banner {
 	width: 95%;
 	height: 250px;
 	margin: 0 auto;
 	border: 3px solid #390853;
 	background: #fff;
-	filter: drop-shadow(4px 4px 0 #20213d);
+	box-shadow: 4px 4px 0 #20213d;
 }
 
-.banner .tabHeader {
+#banner .tabHeader {
 	border-bottom: 3px solid #390853;
 	background: #a99af5;
 	padding: 5px 10px;
@@ -135,7 +135,7 @@ header h2 {
 	gap: 5px;
 }
 
-.banner p {
+#banner p {
 	font-family: 'Silkscreen', sans-serif;
 	font-size: 20px;
 	font-style: normal;
@@ -203,7 +203,7 @@ header h2 {
 	flex: 1;
 	border: 3px solid #390853;
 	background: #f7f7f7;
-	filter: drop-shadow(4px 4px 0 #20213d);
+	box-shadow: 4px 4px 0 #20213d;
 	height: 320px;
 }
 
