@@ -1,0 +1,315 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+#container {
+    max-width: 1200px;
+    min-width: 900px;
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    background: linear-gradient(15deg, #9795ef 0%, #f9c5d1 100%);
+    padding-top: 30px;
+    flex: 1;
+}
+
+#container>header {
+    height: 43px;
+    background: #e8e7ef;
+    border-bottom: 3px solid #20213d;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+
+#container>header h2 {
+    font-family: 'Silkscreen', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    color: #20213d;
+}
+
+.journalHeader {
+    background: #fff;
+    border-bottom: 2px solid #20213d;
+    padding: 0 0 12px;
+}
+
+.journalHeader h1 {
+    font-family: 'Press Start 2P', system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 12px;
+    color: #20213D;
+}
+
+.journalHeader p {
+    font-family: 'Silkscreen', sans-serif;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #a99af5;
+}
+
+.journalWindow {
+    width: 70%;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    border: #390853 3px solid;
+    background: #af9ff0;
+    padding: 10px;
+    box-shadow: 4px 4px 0 #20213d;
+
+}
+
+.journalWindow .tabHeader {
+    background: #a99af5;
+    border-bottom: 3px solid #390853;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tabHeader p,
+.tabHeader a {
+    font-family: 'Silkscreen', sans-serif;
+    font-size: 1rem;
+    color: #20213d;
+}
+
+.tabHeader a {
+    text-decoration: none;
+}
+
+.windowIcons {
+    display: flex;
+    gap: 5px;
+}
+
+article {
+    padding: 40px;
+    color: #20213d;
+    background: #fff;
+    border: 3px solid #390853;
+
+    height: 600px;
+    overflow-y: scroll;
+}
+
+/* Scroll Bar from https://developer.chrome.com/docs/css-ui/scrollbar-styling*/
+
+article::-webkit-scrollbar {
+    scrollbar-width: thin;
+}
+
+article::-webkit-scrollbar-track {
+    background: #e8e7ef;
+    border-left: 3px solid #390853;
+}
+
+article::-webkit-scrollbar-thumb {
+    background: #fda4dd;
+    border: 2px solid #20213d;
+}
+
+article::-webkit-scrollbar-thumb:hover {
+    background: #f58acb;
+}
+
+article h1 {
+    font-family: 'Press Start 2P', system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+article h2,
+article h3 {
+    font-family: 'Silkscreen', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+article h2 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+
+article h3 {
+    font-size: 1.2rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+
+}
+
+article time {
+    font-family: 'DotGothic16', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 20px;
+    display: block;
+}
+
+
+article p {
+    font-family: 'DotGothic16', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+article hr{
+    border: 1px solid #20213d;
+    margin: 30px 0;
+}
+
+.example {
+    display:flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.example img {
+    width: 200px;
+    height: auto;
+    border: 3px solid #390853;
+    flex-shrink: 0;
+}
+
+.exampleText {
+    flex: 1;
+}
+
+.exampleText p {
+    margin-top: 0;
+}
+
+/* button */
+
+.button {
+    margin: 25px 0;
+}
+
+.button a{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Silkscreen', sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #20213d;
+    border: 2px solid #390853;
+    background-color: #A99AF5;
+    padding: 10px 20px;
+    text-decoration: none;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button a svg {
+    width: 21px;
+    height: 21px;
+    flex-shrink: 0;
+}
+
+.button a:hover{
+    transform: translate(-2px, 2px);
+    box-shadow: 3px 3px 0 #20213d;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-top: 3px solid #390853;
+    background: #e8e7ef;
+    padding: 0 5px;
+}
+
+footer p {
+    font-family: 'Silkscreen', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #20213d;
+    border: 2px solid #390853;
+    background-color: #fffdff;
+    padding: 4px 20px;
+    margin: 13px 0;
+}
+
+.footerIcon {
+    width: 74px;
+    border-right: 3px solid #390853;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+}
+
+.footerIcon img {
+    object-fit: contain;
+}
+
+.footerWifiSoundTime {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+    padding-right: 10px;
+}
+
+.footerWifiSoundTime img {
+    object-fit: contain;
+}
+
+.footerWifiSoundTime p {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cursor {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
