@@ -13,7 +13,7 @@ h4,
 p,
 ul,
 ol,
-li{
+li {
 	margin: 0;
 }
 
@@ -113,26 +113,30 @@ header h2 {
 	text-align: center;
 }
 
-.bannerContent img:hover{
-    animation: wiggle 0.5s ease-in-out;
+.bannerContent img:hover {
+	animation: wiggle 0.5s ease-in-out;
 }
 
 @keyframes wiggle {
-    0% {
-        transform: rotate(0deg);
-    }
-    25% {
-        transform: rotate(-5deg);
-    }
-    50% {
-        transform: rotate(5deg);
-    }
-    75% {
-        transform: rotate(-5deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
+	0% {
+		transform: rotate(0deg);
+	}
+
+	25% {
+		transform: rotate(-5deg);
+	}
+
+	50% {
+		transform: rotate(5deg);
+	}
+
+	75% {
+		transform: rotate(-5deg);
+	}
+
+	100% {
+		transform: rotate(0deg);
+	}
 }
 
 .projects {
@@ -215,12 +219,12 @@ header h2 {
 
 .projectContent ul {
 	margin-top: 10px;
-    list-style: none;
-    padding: 0;
+	list-style: none;
+	padding: 0;
 }
 
 .projectContent li {
-    line-height: 1.5;
+	line-height: 1.5;
 }
 
 .projectContent a {
@@ -230,6 +234,22 @@ header h2 {
 	font-weight: 400;
 	font-style: normal;
 	font-size: 20px;
+}
+
+.research .projectContent a:hover {
+	color:#7c92ff;
+}
+
+.madlibs .projectContent a:hover {
+	color:#fda4dd;
+}
+
+.everyPicture .projectContent a:hover {
+	color:#ffc67c;
+}
+
+.gameOn .projectContent a:hover {
+	color:#c5ccef;
 }
 
 .projectContent a::before {
@@ -288,6 +308,7 @@ footer p {
 .footerWifiSoundTime img {
 	object-fit: contain;
 }
+
 .footerWifiSoundTime p {
 	border: none;
 	background: none;
