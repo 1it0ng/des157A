@@ -89,7 +89,7 @@ main {
 }
 
 .journalWindow .tabHeader {
-    background: #a99af5;
+    background: #af9ff5;
     border-bottom: 3px solid #390853;
     padding: 5px 10px;
     display: flex;
@@ -189,13 +189,13 @@ article p {
     margin-bottom: 1rem;
 }
 
-article hr{
+article hr {
     border: 1px solid #20213d;
     margin: 30px 0;
 }
 
 .example {
-    display:flex;
+    display: flex;
     align-items: flex-start;
     gap: 20px;
 }
@@ -221,7 +221,7 @@ article hr{
     margin: 25px 0;
 }
 
-.button a{
+.button a {
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -245,7 +245,7 @@ article hr{
     flex-shrink: 0;
 }
 
-.button a:hover{
+.button a:hover {
     transform: translate(-2px, 2px);
     box-shadow: 3px 3px 0 #20213d;
 }
