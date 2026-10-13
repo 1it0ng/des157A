@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortune Teller</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Luminari, fantasy;
+            color: white;
+            font-size: 2.5em;
+            background-color: #2c126a;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+            font-size: 0.7em;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1 id="header">🔮</h1>
+    <h2> Fortune Teller</h2>
+    <p id="name"></p>
+    <p id="fortune"></p>
+    <p> Your Lucky Items</p>
+    <ul id="luckyItems"></ul>
+
+    <script>
+        // my program takes a user's name and a number between 1 and 10 to generate a fortune and lucky items for the user
+        var askName = prompt("What is your name?");
+        var number = prompt("Pick a number between 1 and 10");
+
+        var fortunes = ["Your future is bright", "You will blink at least once today", "Your crush likes you back", "Your crush don't like you back", "Your professor will give you a good grade", "You will lose your right earbud today", "The chicken crossed the road", "The 10 dollar matcha is not worth it, trust me", "In a time of need there will be no toilet paper", "You will experience 2 chances of luck with 1 chance of bad luck", "One egg you crack will be double yolk", "Your shoelace will untie in 2 hours", "3 minute stomach ache", "Battery will be 100% today", "Someone will stink near you today", "Your bread will taste like bananas"]
+
+        var luckyItemsList = ["Jasmine Milk Tea, Large, Normal Ice, 30% Sugar", "pickles", "McDonalds 6 piece nugget happy meal", "Buldak 2x Spicy Ramen", "Blue sock", "black cat", "red pen", "blue pen", "fluffy blanket", "llama", "corgi dog", "white mug", "anything that is yellow", "purple shoes", "glasses", "black tshirt"]
+
+        function randomInt(min, max) {
+            return Math.floor( (max - min + 1) * Math.random()) + min;
+        }
+
+        function randomFortune(){
+            var num = randomInt(0, fortunes.length -1);
+            return fortunes[num];
+        }
+
+        function showFortune(){
+            var myFortune = randomFortune();
+            var userName = document.querySelector('#name');
+            userName.innerHTML = askName.toUpperCase();
+            var pageFortune = document.querySelector('#fortune');
+            pageFortune.innerHTML = myFortune
+
+            var myColor = pickColor();
+            var pageColor = document.querySelector('body');
+            pageColor.style.backgroundColor = myColor;
+        }
+
+        function showLuckyItems (){
+            var luckyList = document.querySelector('#luckyItems');
+            for ( var i = 0; i <3; i++) {
+                var items = randomInt(0, luckyItemsList.length - 1);
+                var item = luckyItemsList[items];
+                var myList = document.createElement('li');
+                var myListNode = document.createTextNode(item);
+                myList.appendChild(myListNode);
+                luckyList.appendChild(myList);
+            }
+        }
+
+        function pickColor(){
+            if (number <= 3) {
+                return '#7A1F2B';
+            }
+            else if (number <= 7) {
+                return '#3A2A8C'
+            }
+            else {
+                return "#1F5E3A"
+            }
+
+        }
+
+        showFortune();
+        showLuckyItems();
+
+
+
+    </script>
+
+</body>
+
+</html>
