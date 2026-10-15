@@ -313,3 +313,25 @@ footer p {
         opacity: 0;
     }
 }
+
+.practiceList {
+    font-family: 'DotGothic16', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding-left: 1.5rem;
+    margin: 0 0 1rem;
+    list-style-type: square;
+}
+
+.practiceList li {
+    margin-bottom: 0.75rem;
+}
+
+.practiceList li::marker {
+    color: #a99af5;
+}
+
+.practiceList strong {
+    font-family: 'Silkscreen', sans-serif;
+    font-weight: 400;
+}
