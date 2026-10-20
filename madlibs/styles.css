@@ -1,0 +1,174 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+html {
+    background: linear-gradient(to right, #6b0f1e, #090909);
+    min-height: 100%;
+    display: flex;
+}
+
+body {
+    width: 1200px;
+    height: 750px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #040605;
+    color: #E8E8E8;
+    font-family: 'IBM Plex Mono', monospace;
+
+}
+
+main {
+    flex: 1;
+}
+
+h1 {
+    font-family: 'VT323', monospace;
+}
+
+.overlay {
+    display: none;
+}
+
+.overlay.showing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.overlay h2 {
+    font-family: 'VT323', monospace;
+    font-weight: 400;
+    font-size: 1.4rem;
+    border-bottom: 3px solid #111111;
+    padding: 5px 10px;
+    background: #444444;
+
+}
+
+.overlay article {
+    border: 3px solid #444444;
+    background: #090909;
+    box-shadow: 4px 4px 0 #000000;
+
+    width: 800px;
+    max-height: 700px;
+    overflow-y: auto;
+}
+
+.overlay p {
+    padding: 0 20px;
+    margin-top: 10px;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.overlay button {
+    margin: 20px;
+}
+
+.overlay span {
+    color: #9E1B1B;
+    font-weight: 700;
+}
+
+.overlay strong {
+    font-family: 'VT323', monospace;
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px 30px;
+    padding: 20px 40px;
+}
+
+form p {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+input[type="submit"] {
+    grid-column: 1 / -1;
+    justify-self: center;
+
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-top: 3px solid #444444;
+    background: #111111;
+    padding: 0 5px;
+}
+
+footer p {
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    color: #D8D8D8;
+    border: 2px solid #444444;
+    padding: 4px 20px;
+    margin: 13px 0;
+}
+
+footer div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+}
+
+footer div p {
+    border: none;
+    padding: 0;
+}
+
+.overlay button::before {
+    content: '▶';
+    visibility: hidden;
+    margin-right: 10px;
+}
+
+.overlay button:hover::before {
+    visibility: visible;
+}
+
+input[type="submit"]:hover {
+    background: #9E1B1B;
+    color: #e8e8e8;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}

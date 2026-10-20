@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Dark Web Horror Mad Lib</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=VT323&display=swap"
+        rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- javascript -->
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>TRACE.EXE</h1>
+        <p>A corrupted file was recovered. Complete the missing information to restore it.</p>
+        <aside>WARNING: OPEN AT YOUR OWN RISK</aside>
+    </header>
+
+    <main>
+        <form>
+
+            <!-- Name -->
+            <p>
+                <label for="name">A person's name:</label>
+                <input type="text" id="name" required>
+            </p>
+
+            <!-- Time at night -->
+            <p>
+                <label for="time">A time late at night:</label>
+                <input type="text" id="time" required>
+            </p>
+
+            <!-- number -->
+            <p>
+                <label for="number">A number:</label>
+                <input type="number" id="number" required>
+            </p>
+
+            <!-- A weird website name -->
+            <p>
+                <label for="website">A weird website name:</label>
+                <input type="text" id="website" required>
+            </p>
+
+            <!-- An adjective -->
+            <p>
+                <label for="adjective">An adjective:</label>
+                <input type="text" id="adjective" required>
+            </p>
+
+            <!-- An Action -->
+            <p>
+                <label for="action">A past-tense action:</label>
+                <input type="text" id="action" required>
+            </p>
+
+            <!-- A place -->
+            <p>
+                <label for="place">A place:</label>
+                <input type="text" id="place" required>
+            </p>
+
+            <!-- A object -->
+            <p>
+                <label for="object">An object you would find in a bedroom:</label>
+                <input type="text" id="object" required>
+            </p>
+
+            <!-- A sound -->
+            <p>
+                <label for="sound">A sound:</label>
+                <input type="text" id="sound" required>
+            </p>
+
+            <!-- A verb that ends in -ing -->
+            <p>
+                <label for="verb">A verb that ends in -ing:</label>
+                <input type="text" id="verb" required>
+            </p>
+
+            <!-- A weapon -->
+            <p>
+                <label for="weapon">A weapon:</label>
+                <input type="text" id="weapon" required>
+            </p>
+
+            <!-- A body part -->
+            <p>
+                <label for="body">A body part:</label>
+                <input type="text" id="body" required>
+            </p>
+
+            <!-- Another Name -->
+            <p>
+                <label for="anotherName">Another person's name:</label>
+                <input type="text" id="anotherName" required>
+            </p>
+
+            <!-- A random phrase -->
+            <p>
+                <label for="phrase">A random phrase:</label>
+                <input type="text" id="phrase" required>
+            </p>
+
+            <input type="submit" value="RESTORE FILE">
+        </form>
+
+        <section id="part1" class="overlay showing">
+            <article>
+                <h2>browser.exe</h2>
+                <p>It was <span>[TIME]</span> when <span>[NAME]</span> decided to explore the dark web for the first
+                    time. </p>
+
+                <p><span>[NAME]</span> didn't know what they were doing, but they were clicking around and stumbled upon
+                    a suspicious website called <span>[WEBSITE NAME]</span>.</p>
+
+                <p>The page went completely black except for one <span>[ADJECTIVE]</span> message: <strong>I SEE
+                        YOU</strong></p>
+
+                <p><span>[NAME]</span> immediately tried to close the website, but then <span>[NUMBER]</span> error
+                    messages popped up.</p>
+
+                <p><span>[NAME]</span> <span>[ACTION]</span> and held down the power button until the computer finally
+                    went black.
+                </p>
+
+                <p>"Probably just some stupid prank," <span>[NAME]</span> thought.
+                </p>
+
+                <p>Still, something about it felt wrong.</p>
+
+                <p>Just to be safe, <span>[NAME]</span> didn't turn the computer on again for <span>[NUMBER]</span>
+                    days.
+                </p>
+
+                <button>CONTINUE</button>
+
+            </article>
+        </section>
+
+        <section id="part2" class="overlay">
+            <article>
+                <h2>ERROR_404</h2>
+
+                <p>Late one night, <span>[NAME]</span> finally pressed the power button.</p>
+
+                <p>The computer started normally. <br>
+
+                    Then the desktop disappeared. <br>
+
+                    An error message appeared.</p>
+
+                <p><strong>ERROR 404<br>
+                        USER: <span>[NAME]</span><br>
+                        LOCATION: <span>[PLACE]</span><br>
+                        STATUS: ONLINE</strong></p>
+
+                <p><span>[NAME]</span> froze.</p>
+
+                <p>They had never given the website their name. <br>
+                    They definitely hadn’t given it their location. <br>
+                    Another message appeared.</p>
+
+                <p><strong>Nice <span>[OBJECT]</span>.</strong></p>
+
+                <p><span>[NAME]</span> slowly looked at the <span>[OBJECT]</span> sitting across the room.</p>
+
+                <p>Immediately, another message appeared.</p>
+                <p><strong>Why are you looking at it?</strong></p>
+
+                <p><span>[NAME]</span> stopped moving.</p>
+
+                <p>Another message.</p>
+                <p><strong>Look at me.</strong></p>
+                <p>Then the speakers made a muffled noise.</p>
+
+                <p><span>[SOUND]</span>.</p>
+
+                <p>Silence. <br>
+                    Then again.</p>
+                <p><span>[SOUND]</span>.</p>
+
+                <p>Closer this time.</p>
+
+                <button>CONTINUE</button>
+            </article>
+        </section>
+
+        <section id="part3" class="overlay">
+            <article>
+                <h2>webcam.exe</h2>
+
+                <p>The webcam light turned on.</p>
+
+                <p><span>[NAME]</span> reached toward the computer to cover it.</p>
+
+                <p>
+                    A message appeared before their hand reached the camera.
+                </p>
+
+                <p><strong>Don’t.</strong></p>
+
+                <p><span>[NAME]</span> pulled their hand away.</p>
+
+                <p>A video window opened. It was the webcam.</p>
+
+                <!-- webcam image -->
+
+                <p>There was <span>[NAME]</span>, sitting in front of the computer. Their <span>[OBJECT]</span> was
+                    visible behind
+                    them.</p>
+
+                <p>Everything looked normal.</p>
+
+                <p>Until <span>[NAME]</span> noticed something.</p>
+
+                <p>In the darkest corner of the video stood <span>[ANOTHER NAME]</span>. Completely still. Holding a
+                    <span>[WEAPON]</span>.
+                </p>
+
+                <p><span>[NAME]</span> turned around.</p>
+
+                <p>
+                    Nothing. The room was empty.<br>
+                    They looked back at the screen. <br>
+                    The figure was closer.
+                </p>
+
+                <p><span>[NAME]</span> turned around again. Still nothing.</p>
+
+                <p>
+                    When they looked back at the computer, <span>[ANOTHER NAME]</span> was standing directly behind them
+                    in the webcam
+                    feed, <span>[VERB ENDING IN -ING]</span>.
+                </p>
+
+                <p>The video glitched.</p>
+
+                <p><span>[SOUND]</span>.</p>
+
+                <p>The screen froze. But something was wrong.</p>
+
+                <p><span>[NAME]</span> was no longer sitting in the chair.</p>
+
+                <p>Now <span>[ANOTHER NAME]</span> was sitting there. In <span>[NAME]</span>’s chair. Holding a
+                    <span>[BODY PART]</span>.
+                </p>
+
+                <button>CONTINUE</button>
+            </article>
+
+        </section>
+
+        <section id="part4" class="overlay">
+
+            <article>
+                <h2>trace.exe</h2>
+                <p>
+                    The webcam feed disappeared. <br>
+                    The screen went black. <br>
+                    A cursor blinked.
+                </p>
+
+                <p>Then one final message appeared:</p>
+
+                <p><strong><span>[RANDOM PHRASE]</span></strong></p>
+
+                <p><span>[NAME]</span> stared at the screen.</p>
+
+                <p>
+                    Another line appeared. <br>
+                    <strong>BE CAREFUL WHAT YOU OPEN.</strong> <br>
+                    Then: <br>
+                    <strong>YOU NEVER CLOSED IT.</strong>
+                </p>
+
+                <p><span>[SOUND]</span>.</p>
+
+                <p>This time, the sound didn’t come from the computer.</p>
+
+                <p>It came from behind them.</p>
+
+                <button>RUN AGAIN</button>
+            </article>
+        </section>
+
+        <section id="error" class="overlay">
+            <article>
+                <h2>SYSTEM ERROR</h2>
+                <p><strong>FILE RESTORE FAILED</strong></p>
+                <p>Missing data detected. Fill in all fields to restore the file.</p>
+                <button>OK</button>
+            </article>
+        </section>
+
+    </main>
+
+    <footer>
+        <img src="images/sad.png" alt="sad face icon" width="50" height="50">
+        <p>MADLIBS</p>
+        <p>DES 157A</p>
+        <p>FALL 2026</p>
+        <div>
+            <img src="images/wifi.png" alt="wifi icon" width="30" height="30">
+            <img src="images/sound.png" alt="sound icon" width="30" height="30">
+            <p>12:33AM</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
