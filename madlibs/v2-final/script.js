@@ -21,7 +21,15 @@
         let counter = 0;
 
         for (const eachField of formData) {
-            if (eachField.value) {
+            let onlySpaces = true;
+
+            for (const letter of eachField.value) {
+                if (letter !== ' ') {
+                    onlySpaces = false;
+                }
+            }
+
+            if (eachField.value && !onlySpaces) {
                 eachField.className = '';
             } else {
                 eachField.className = 'missing';
@@ -29,6 +37,7 @@
             }
             counter++;
         }
+
         if (emptyFields.length > 0) {
             showErrors(formData, emptyFields);
         } else {
@@ -57,27 +66,27 @@
         errorOverlay.className = 'overlay showing';
     }
 
-    errorButton.addEventListener('click', function (){
+    errorButton.addEventListener('click', function () {
         errorOverlay.className = 'overlay';
         firstEmptyField.focus();
     });
 
-    document.querySelector('#part1 button').addEventListener('click', function(){
+    document.querySelector('#part1 button').addEventListener('click', function () {
         document.querySelector('#part1').className = 'overlay';
         document.querySelector('#part2').className = 'overlay showing';
     });
 
-    document.querySelector('#part2 button').addEventListener('click', function(){
+    document.querySelector('#part2 button').addEventListener('click', function () {
         document.querySelector('#part2').className = 'overlay';
         document.querySelector('#part3').className = 'overlay showing';
     });
 
-    document.querySelector('#part3 button').addEventListener('click', function(){
+    document.querySelector('#part3 button').addEventListener('click', function () {
         document.querySelector('#part3').className = 'overlay';
         document.querySelector('#part4').className = 'overlay showing';
     });
 
-    document.querySelector('#part4 button').addEventListener('click', function(){
+    document.querySelector('#part4 button').addEventListener('click', function () {
         document.querySelector('#part4').className = 'overlay';
         formData[0].focus();
     });

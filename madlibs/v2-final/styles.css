@@ -243,7 +243,7 @@ input[type="submit"]:hover,
 .overlay aside {
     position: absolute;
     right: 40px;
-    bottom: 60px;
+    bottom: 50px;
     border: 3px solid #444444;
     background: #090909;
     box-shadow: 5px 5px 0 #000000;
