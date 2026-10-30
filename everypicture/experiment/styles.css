@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.container {
+    height: 85vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.container img {
+    height: 100%;
+    display: block;
+}
+
+.controls {
+    display: flex;
+    gap: 20px;
+}
+
+#pauseButton {
+    padding: 8px 20px;
+    border: 2px solid white;
+    color: white;
+    background: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+#trip {
+    padding: 8px 20px;
+    border: 2px solid white;
+    color: white;
+    background: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+:root {
+    --sliderwidth: ;
+}
+
+@keyframes moveSlider {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: var(--sliderwidth)
+    }
+}
+
+.animate {
+    animation-name: moveSlider;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* to make it go right, just change the left property to right */
+.slider {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* this is the only change! */
+    height: 100%;
+    /* transition: all 60s linear; */
+}
+
+.film {
+    width: 395px;
+    height: 100%;
+    opacity: 0.9;
+    mix-blend-mode: multiply;
+}
+
+.lens {
+    width: 395px;
+    height: 100%;
+}
+
+.gray {
+    backdrop-filter: grayscale(1);
+}
+
+.invert {
+    backdrop-filter: invert(0.85) hue-rotate(180deg);
+}
+
+.blur {
+    backdrop-filter: blur(10px);
+}
+
+.saturate {
+    backdrop-filter: saturate(200%);
+}
+
+.sepia {
+    backdrop-filter: sepia(100%);
+}
+
+
+.a,
+.b {
+    display: flex;
+    height: 100%;
+}
+
+.red {
+    background-color: #ff0000;
+}
+
+.orange {
+    background-color: #ff2e00;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: #00ff3c;
+}
+
+.blue {
+    background-color: #0019ff;
+}
+
+.magenta {
+    background-color: magenta;
+}
