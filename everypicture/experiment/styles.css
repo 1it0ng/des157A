@@ -139,3 +139,9 @@ body {
 .magenta {
     background-color: magenta;
 }
+
+.awake .stand {
+    opacity: 1;
+    transition: none;
+}
+

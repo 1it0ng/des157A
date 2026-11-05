@@ -1,0 +1,411 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Special Elite', monospace;
+}
+
+/* intro */
+header {
+    position: relative;
+    z-index: 1;
+    /* covers the fixed photo */
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header p {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin: 20px 0 0;
+}
+
+header h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+header a {
+    color: white;
+    letter-spacing: 0.3em;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: color 0.5s ease;
+}
+
+header a:hover {
+    color: red;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section h2 {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: 20px;
+    font-size: 2rem;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 20px black;
+}
+
+figure {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.layer {
+    opacity: 0;
+    filter: blur(15px);
+    transform: scale(1.05);
+    transition: opacity 2s ease-in-out, filter 2s ease-in-out, transform 2s ease-in-out;
+}
+
+:root {
+    --sliderwidth: -1100vw;
+}
+
+@keyframes moveSlider {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: var(--sliderwidth);
+    }
+}
+
+.animate {
+    animation-name: moveSlider;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.slider {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+.a,
+.b {
+    display: flex;
+    height: 100%;
+}
+
+.film,
+.lens {
+    width: 100vw;
+    height: 100%;
+}
+
+.film {
+    opacity: 0.9;
+    mix-blend-mode: multiply;
+}
+
+/* lenses */
+.gray {
+    backdrop-filter: grayscale(1);
+}
+
+.shift {
+    backdrop-filter: hue-rotate(180deg) saturate(3);
+}
+
+.blur {
+    backdrop-filter: blur(10px);
+}
+
+.saturate {
+    backdrop-filter: saturate(200%);
+}
+
+.sepia {
+    backdrop-filter: sepia(100%);
+}
+
+/* film colors */
+.red {
+    background-color: #ff0000;
+}
+
+.orange {
+    background-color: #ff2e00;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: #00ff3c;
+}
+
+.blue {
+    background-color: #0019ff;
+}
+
+.magenta {
+    background-color: magenta;
+}
+
+@keyframes colorDrift {
+    from {
+        filter: hue-rotate(0deg) saturate(2);
+    }
+
+    to {
+        filter: hue-rotate(360deg) saturate(2);
+    }
+}
+
+.photo1 .container img {
+    filter: brightness(0.7) saturate(0.4);
+}
+
+.photo1 .slider {
+    display: none;
+}
+
+.photo2 .sleep2 {
+    opacity: 1;
+}
+
+.photo2 .container img {
+    animation: breathe 3s ease-in-out infinite;
+}
+
+.photo3 .close {
+    opacity: 1;
+}
+
+.photo3 .container img {
+    animation: colorDrift 10s linear infinite,
+        sway 8s ease-in-out infinite;
+}
+
+.photo3 .film {
+    mix-blend-mode: overlay;
+}
+
+.photo4 .dark {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+}
+
+.photo4 .container img {
+    animation: colorDrift 7s linear infinite,
+        sway 5s ease-in-out infinite;
+}
+
+.photo5 .bright {
+    opacity: 1;
+}
+
+.photo5 .container img {
+    animation: colorDrift 5s linear infinite,
+        warp 6s ease-in-out infinite;
+}
+
+.photo5 .film {
+    mix-blend-mode: overlay;
+}
+
+.photo6 .stand {
+    opacity: 1;
+}
+
+.photo6 .container img {
+    animation: colorDrift 2s linear infinite,
+        warp 3s ease-in-out infinite;
+}
+
+.photo6 .film {
+    mix-blend-mode: difference;
+}
+
+.photo2 .sleep2,
+.photo3 .close,
+.photo5 .bright,
+.photo6 .stand,
+.photo7 .container .down {
+    filter: blur(0);
+    transform: scale(1);
+}
+
+.photo2 .slider {
+    animation-duration: 45s;
+}
+
+.photo3 .slider {
+    animation-duration: 35s;
+}
+
+.photo4 .slider {
+    animation-duration: 25s;
+}
+
+.photo5 .slider {
+    animation-duration: 15s;
+}
+
+.photo6 .slider {
+    animation-duration: 8s;
+}
+
+.photo7 .slider {
+    animation-duration: 6s;
+}
+
+.photo3 .layer {
+    transition-duration: 1.6s;
+}
+
+.photo4 .layer {
+    transition-duration: 1.2s;
+}
+
+.photo5 .layer {
+    transition-duration: 0.8s;
+}
+
+.photo6 .layer {
+    transition-duration: 0.5s;
+}
+
+.photo7 .layer {
+    transition-duration: 0.2s;
+}
+
+@keyframes dizzy {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    25% {
+        transform: rotate(3deg) scale(1.08) skewX(4deg);
+    }
+
+    50% {
+        transform: rotate(-2deg) scale(1.15);
+    }
+
+    75% {
+        transform: rotate(4deg) scale(1.05) skewY(-3deg);
+    }
+
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+@keyframes melt {
+    0% {
+        filter: hue-rotate(0deg) saturate(3) blur(0);
+    }
+
+    50% {
+        filter: hue-rotate(180deg) saturate(4) blur(4px);
+    }
+
+    100% {
+        filter: hue-rotate(360deg) saturate(3) blur(0);
+    }
+}
+
+@keyframes breathe {
+
+    0%,
+    100% {
+        transform: scale(1.02);
+    }
+
+    50% {
+        transform: scale(1.06);
+    }
+}
+
+@keyframes sway {
+
+    0%,
+    100% {
+        transform: rotate(0deg) scale(1.06);
+    }
+
+    25% {
+        transform: rotate(1deg) scale(1.08);
+    }
+
+    75% {
+        transform: rotate(-1deg) scale(1.07);
+    }
+}
+
+@keyframes warp {
+
+    0%,
+    100% {
+        transform: rotate(0deg) scale(1.1);
+    }
+
+    25% {
+        transform: rotate(2deg) scale(1.14) skewX(2deg);
+    }
+
+    50% {
+        transform: rotate(-1deg) scale(1.12);
+    }
+
+    75% {
+        transform: rotate(2deg) scale(1.1) skewY(-2deg);
+    }
+}
+
+
+
+.photo7 .container img {
+    opacity: 0;
+}
+
+.photo7 .container .down {
+    opacity: 1;
+    animation: dizzy 2s ease-in-out infinite,
+        melt 4s linear infinite;
+}
