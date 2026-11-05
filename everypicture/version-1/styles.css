@@ -1,0 +1,278 @@
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Special Elite', monospace;
+}
+
+/* intro */
+header {
+    position: relative;
+    z-index: 1;
+    /* covers the fixed photo */
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+header a {
+    color: white;
+    letter-spacing: 0.3em;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: color 0.5s ease;
+}
+
+header a:hover {
+    color: red;
+}
+
+section {
+    height: 100vh;
+}
+
+section h2 {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: 20px;
+    font-size: 1rem;
+    opacity: 0.5;
+}
+
+figure {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.container img {
+    height: 100%;
+    width: auto;
+    display: block;
+}
+
+.layer {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+:root {
+    --sliderwidth: -220vh;
+}
+
+@keyframes moveSlider {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: var(--sliderwidth);
+    }
+}
+
+.animate {
+    animation-name: moveSlider;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.slider {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+.a,
+.b {
+    display: flex;
+    height: 100%;
+}
+
+.film,
+.lens {
+    width: 20vh;
+    height: 100%;
+}
+
+.film {
+    opacity: 0.9;
+    mix-blend-mode: multiply;
+}
+
+/* lenses */
+.gray {
+    backdrop-filter: grayscale(1);
+}
+
+.shift {
+    backdrop-filter: hue-rotate(180deg) saturate(3);
+}
+
+.blur {
+    backdrop-filter: blur(10px);
+}
+
+.saturate {
+    backdrop-filter: saturate(200%);
+}
+
+.sepia {
+    backdrop-filter: sepia(100%);
+}
+
+/* film colors */
+.red {
+    background-color: #ff0000;
+}
+
+.orange {
+    background-color: #ff2e00;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: #00ff3c;
+}
+
+.blue {
+    background-color: #0019ff;
+}
+
+.magenta {
+    background-color: magenta;
+}
+
+@keyframes colorDrift {
+    from {
+        filter: hue-rotate(0deg) saturate(2);
+    }
+
+    to {
+        filter: hue-rotate(360deg) saturate(2);
+    }
+}
+
+@keyframes brokenFlashLight {
+
+    0%,
+    35% {
+        opacity: 0;
+    }
+
+    50%,
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.photo1 .container img {
+    filter: brightness(0.7) saturate(0.4);
+}
+
+.photo1 .slider {
+    display: none;
+}
+
+.photo2 .sleep2 {
+    opacity: 1;
+}
+
+.photo3 .close {
+    opacity: 1;
+}
+
+.photo3 .container img {
+    animation: colorDrift 10s linear infinite;
+}
+
+.photo3 .film {
+    mix-blend-mode: overlay;
+}
+
+.photo4 .dark {
+    animation: brokenFlashLight 1.5s linear infinite;
+}
+
+.photo5 .bright {
+    opacity: 1;
+}
+
+.photo5 .container img {
+    animation: colorDrift 5s linear infinite;
+}
+
+.photo5 .film {
+    mix-blend-mode: overlay;
+}
+
+.photo6 .stand {
+    opacity: 1;
+}
+
+.photo6 .container img {
+    animation: colorDrift 2s linear infinite;
+}
+
+.photo6 .film {
+    mix-blend-mode: difference;
+}
+
+footer {
+    position: relative;
+    z-index: 1;
+    background-color: black;
+    overflow: hidden;
+}
+
+footer h2 {
+    margin: 0;
+    padding: 20px;
+    font-size: 1rem;
+    opacity: 0.5;
+}
+
+footer img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 3s ease;
+}
+
+footer img:hover {
+    transform: scale(1.1);
+}
