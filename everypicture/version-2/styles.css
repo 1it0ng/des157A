@@ -4,11 +4,9 @@ body {
     font-family: 'Special Elite', monospace;
 }
 
-/* intro */
 header {
     position: relative;
     z-index: 1;
-    /* covers the fixed photo */
     height: 100vh;
     background-color: black;
     display: flex;
@@ -38,6 +36,12 @@ header a {
 
 header a:hover {
     color: red;
+}
+
+button {
+    padding: 10px;
+    background: none;
+    color: white;
 }
 
 section {
@@ -94,7 +98,7 @@ figure {
 }
 
 :root {
-    --sliderwidth: -1100vw;
+    --sliderwidth: ;
 }
 
 @keyframes moveSlider {
@@ -200,7 +204,7 @@ figure {
 }
 
 .photo1 .slider {
-    display: none;
+    visibility: hidden;
 }
 
 .photo2 .sleep2 {
